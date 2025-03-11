@@ -1,0 +1,35 @@
+    <p-floatlabel variant="on">
+      <ng-container *ngIf="type=='single'">
+        <div class="mt-1">
+          <p-select class="w-100"
+           [formControl]="control" 
+            [options]="list" 
+            optionLabel="name"
+            optionValue="code"
+            [disabled]="disabled"
+            [readonly]="readOnly"
+             (onChange)="onChange($event)" 
+            [placeholder]="placeholder"
+           [filter]="false"  />
+        </div>
+     </ng-container>
+     
+   <ng-container *ngIf="type=='multi'">
+    <div class="mt-1">
+    <p-multiselect 
+    [options]="list"
+    optionLabel="name"
+    optionValue="code"  
+    [placeholder]="placeholder"  
+    [formControl]="control" 
+    [disabled]="disabled"
+    [readonly]="readOnly"
+    display="chip"
+    (onChange)="onChange($event)" 
+    class="w-100" />
+    </div>
+   </ng-container>
+       <label>{{label|translate}}</label>
+    </p-floatlabel>
+   
+   <!-- [maxSelectedLabels]="3"  -->

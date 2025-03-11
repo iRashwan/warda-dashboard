@@ -1,0 +1,30 @@
+<div class="sidebar-container">
+
+  <div class="content">
+    <div class="logo-section" routerLink="/dashboard">
+      <img width="100" src="assets/images/logo.svg" alt="matlop-logo">
+    </div>
+
+    <div class="routing-section">
+      <div class="pages-routing-section section-color">
+        <!-- [pTooltip]="route.label | translate"
+            [tooltipPosition]="selectedLang == 'ar' ? 'left' : 'right'" -->
+        <ng-container *ngFor="let route of routingList">
+          <div *ngIf="route.type.includes(role)" [routerLink]="route.route" class="routing-action" routerLinkActive="active"
+            [routerLinkActiveOptions]="{ exact: true }" >
+            <span [class]="route.icon"></span>
+            <p  >{{route.label | translate}}</p>
+          </div>
+        </ng-container>
+
+      </div>
+      <div class="setting-section section-color">
+      
+          <div class="log-out user-image-section mt-5" width="30px" (click)="logOut()" routerLink="/auth/login" [pTooltip]="'Profile' | translate" [tooltipPosition]="selectedLang == 'ar' ? 'left' : 'right'">
+            <img src="assets/images/side-dashbord-icons/s-logout.svg" alt="log-out">
+            <span class="text-danger">{{'shared.log_out'|translate}}</span>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,70 @@
+:host ::ng-deep {
+  .navbar-container {
+    .content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      width: 100%;
+      padding: 20px 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      background: #f8fafc;
+      margin-top: 4px;
+      .profile{
+        padding: 7px;
+        border-radius: 32px;
+        background-color: #8174A0;
+        div.info{
+          font-size: 13px;
+          line-height: 14px;
+          margin: 5px;
+          span.name{
+            color:#fff;
+          }
+          span.mail{
+            color:#F3F3F3
+          }
+        }
+      }
+      .search-section {
+        flex-basis: 40%;
+        .p-autocomplete {
+          width: 100%;
+          margin: 0px 30px;
+        }
+            .p-inputtext {
+              width: 90%!important;
+              border-radius: 32px!important;
+            }
+      }
+      .lang-btn {
+        padding: 0.5rem 1rem;
+        background: transparent;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+      
+      .lang-btn:hover {
+        background: #f5f5f5;
+      }
+      
+      .option-section {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+
+        .notifications-section {
+          cursor: pointer;
+        }
+
+        .logout-section {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
