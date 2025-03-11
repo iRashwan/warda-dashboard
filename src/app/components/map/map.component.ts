@@ -15,8 +15,8 @@ export class MapComponent implements AfterViewInit {
   @Input()lng: any = 0;
 
   ngOnInit(){
+ console.log('test');
  
-
   }
   ngAfterViewInit(): void {
     if (navigator.geolocation) {
