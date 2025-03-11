@@ -47,7 +47,7 @@ export class LoginComponent {
 
   ngOnInit(): void {
     this.initAppTranslation();
-    console.log('new test');
+    console.log('new test asdasd');
 
   }
 
